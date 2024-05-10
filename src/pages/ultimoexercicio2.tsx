@@ -41,16 +41,16 @@ export default function Ultimoexercicio() {
     }
   }
 
+  const estilo = {
+    color: corState,
+    fontSize: fonteState,
+    border: bordaState,
+    background: backgroundState,
+  };
+
   return (
     <div>
-      <p
-        style={{
-          color: corState,
-          fontSize: fonteState,
-          border: bordaState,
-          background: backgroundState,
-        }}
-      >
+      <p style={estilo}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus
         tincidunt lobortis.
       </p>

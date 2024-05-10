@@ -6,14 +6,23 @@ import { useState } from "react";
 // --exercicio 2--
 
 export default function Exercicio4() {
-  const [texto, setTexto] = useState(false);
+  const [mostrarTexto, setMostrarTexto] = useState(false);
 
   function clickBotao() {
-    setTexto(!texto);
+    setMostrarTexto(!mostrarTexto);
   }
   return (
     <div>
-      {texto && <p>Informações Secretas</p>}
+      {mostrarTexto == false ? (
+        <div>
+          <p>Informações Secretas</p>
+          <p>cintia</p>
+        </div>
+      ) : (
+        <p>Informações Públicas</p>
+      )}
+
+      {mostrarTexto && <p>Aparecer Exemplo</p>}
 
       <button onClick={clickBotao}>Mostrar/Esconder</button>
     </div>
